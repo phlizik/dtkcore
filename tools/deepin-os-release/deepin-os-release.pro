@@ -1,6 +1,6 @@
 QT -= gui
 TEMPLATE = app
-CONFIG += qt
+CONFIG += qt c++11
 
 HEADERS += ../../src/dsysinfo.h
 
