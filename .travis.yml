@@ -12,6 +12,7 @@ install:
   - source /opt/qt*/bin/qt*-env.sh
 
 script:
+  - sed -i -e 's|<QGSettings/QGSettings>|<QGSettings>|g'  src/settings/backend/gsettingsbackend.cpp # https://github.com/linuxdeepin/dtkcore/issues/8
   - mkdir build
   - cd build
   - qmake .. CONFIG+=release PREFIX=/usr
